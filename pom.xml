@@ -10,24 +10,24 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>1.3.3.RELEASE</version>
+        <version>1.5.1.RELEASE</version>
     </parent>
 
     <groupId>io.pivotal</groupId>
-    <artifactId>luna-sample</artifactId>
+    <artifactId>protectapp-sample</artifactId>
     <version>1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <properties>
-        <luna-provider.version>5.4.1-2</luna-provider.version>
         <java.version>1.8</java.version>
+        <nae.version>8.4.0</nae.version>
     </properties>
 
     <dependencies>
         <dependency>
-            <groupId>com.safenet-inc</groupId>
-            <artifactId>luna-provider</artifactId>
-            <version>${luna-provider.version}</version>
+            <groupId>com.ingrain.security</groupId>
+            <artifactId>nae</artifactId>
+            <version>${nae.version}</version>
             <scope>provided</scope>
         </dependency>
         <dependency>

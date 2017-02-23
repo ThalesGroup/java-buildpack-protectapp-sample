@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/luna-sample.iml" filepath="$PROJECT_DIR$/luna-sample.iml" />
+      <module fileurl="file://$PROJECT_DIR$/protectapp-sample.iml" filepath="$PROJECT_DIR$/protectapp-sample.iml" />
     </modules>
   </component>
 </project>

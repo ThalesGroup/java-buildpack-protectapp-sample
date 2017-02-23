@@ -1,4 +1,4 @@
-package io.pivotal.luna;
+package io.pivotal.protectapp;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -18,7 +18,7 @@ import java.util.Base64;
 import java.util.Map;
 import java.util.Optional;
 
-import static io.pivotal.luna.Util.zip;
+import static io.pivotal.protectapp.Util.zip;
 
 @RestController
 final class CryptoController {
@@ -51,7 +51,7 @@ final class CryptoController {
     @RequestMapping(method = RequestMethod.POST, value = "/decrypt", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     Map<String, String> decrypt(@RequestBody Map<String, String> payload) throws GeneralSecurityException {
         String cipherText = Optional.of(payload.get("cipher-text"))
-                .orElseThrow(() -> new IllegalArgumentException("Payload must contain 'cipher-text'"));
+            .orElseThrow(() -> new IllegalArgumentException("Payload must contain 'cipher-text'"));
 
         this.logger.info("Decrypting Cipher Text '{}'", cipherText);
 
@@ -64,7 +64,7 @@ final class CryptoController {
     @RequestMapping(method = RequestMethod.POST, value = "/encrypt", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     Map<String, String> encrypt(@RequestBody Map<String, String> payload) throws GeneralSecurityException {
         String message = Optional.of(payload.get("message"))
-                .orElseThrow(() -> new IllegalArgumentException("Payload must contain 'message'"));
+            .orElseThrow(() -> new IllegalArgumentException("Payload must contain 'message'"));
 
         this.logger.info("Encrypting Message '{}'", message);
 
@@ -77,7 +77,7 @@ final class CryptoController {
     @RequestMapping(method = RequestMethod.POST, value = "/sign", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     Map<String, String> sign(@RequestBody Map<String, String> payload) throws GeneralSecurityException {
         String message = Optional.of(payload.get("message"))
-                .orElseThrow(() -> new IllegalArgumentException("Payload must contain 'message'"));
+            .orElseThrow(() -> new IllegalArgumentException("Payload must contain 'message'"));
 
         this.logger.info("Signing Message '{}'", message);
 
@@ -90,9 +90,9 @@ final class CryptoController {
     @RequestMapping(method = RequestMethod.POST, value = "/verify", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     Map<String, Object> verify(@RequestBody Map<String, String> payload) throws GeneralSecurityException {
         String message = Optional.of(payload.get("message"))
-                .orElseThrow(() -> new IllegalArgumentException("Payload must contain 'message'"));
+            .orElseThrow(() -> new IllegalArgumentException("Payload must contain 'message'"));
         String signature = Optional.of(payload.get("signature"))
-                .orElseThrow(() -> new IllegalArgumentException("Payload must contain 'signature'"));
+            .orElseThrow(() -> new IllegalArgumentException("Payload must contain 'signature'"));
 
         this.logger.info("Verifying Message '{}' and Signature '{}'", message, signature);
 

@@ -1,4 +1,4 @@
-package io.pivotal.luna;
+package io.pivotal.protectapp;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -16,8 +16,8 @@ final class SecurityProvidersController {
     @RequestMapping(method = RequestMethod.GET, value = "/security-providers")
     List<ProviderProjection> securityProviders() {
         return Arrays.stream(Security.getProviders())
-                .map(ProviderProjection::new)
-                .collect(Collectors.toList());
+            .map(ProviderProjection::new)
+            .collect(Collectors.toList());
     }
 
     static final class ProviderProjection {

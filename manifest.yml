@@ -1,9 +1,9 @@
 ---
 applications:
-- name: luna-sample
+- name: protectapp-sample
   memory: 512M
   instances: 1
-  path: target/luna-sample-1-SNAPSHOT.jar
+  path: target/protectapp-sample-1-SNAPSHOT.jar
   buildpack: https://github.com/cloudfoundry/java-buildpack.git
   services:
-  - myhsm
+  - protectapp

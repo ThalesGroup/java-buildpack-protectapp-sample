@@ -1,4 +1,4 @@
-A REST-ful sample application that exercises the Luna HSM.  
+A REST-ful sample application that exercises the ProtectApp Security Service.
 
 To do this, it exposes four cryptography REST endpoints that expect to recieve a JSON payload. Each endpoint returns values that can be used as arguments to the other endpoints.
 

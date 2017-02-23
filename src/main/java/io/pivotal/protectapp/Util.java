@@ -1,4 +1,4 @@
-package io.pivotal.luna;
+package io.pivotal.protectapp;
 
 import java.util.HashMap;
 import java.util.Map;
